@@ -85,6 +85,8 @@ async fn prepare(
         info,
         components,
         component_triggers,
+        // TODO: appconfig for bindles
+        config_resolver: None,
     })
 }
 

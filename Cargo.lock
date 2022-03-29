@@ -3072,6 +3072,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
 
 [[package]]
+name = "spin-appconfig"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "serde",
+ "thiserror",
+ "toml",
+ "wit-bindgen-wasmtime",
+]
+
+[[package]]
 name = "spin-cli"
 version = "0.1.0"
 dependencies = [
@@ -3111,8 +3122,8 @@ dependencies = [
 name = "spin-config"
 version = "0.1.0"
 dependencies = [
- "anyhow",
  "serde",
+ "spin-appconfig",
 ]
 
 [[package]]
@@ -3123,6 +3134,7 @@ dependencies = [
  "bytes 1.1.0",
  "dirs 4.0.0",
  "sanitize-filename",
+ "spin-appconfig",
  "spin-config",
  "tempfile",
  "tokio",
@@ -3194,6 +3206,7 @@ dependencies = [
  "reqwest",
  "serde",
  "sha2 0.10.2",
+ "spin-appconfig",
  "spin-config",
  "tempfile",
  "tokio",
